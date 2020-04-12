@@ -395,7 +395,8 @@ $(document).ready(function(){
             addChecker(null);
         }else{
             if(respuesta == indiceCorrecto){
-                addChecker(true);
+				addChecker(true);
+				score += 10;
             } else {
                 addChecker(false);                        
             }
@@ -464,7 +465,6 @@ $(document).ready(function(){
 		getTiempo.innerHTML = tiempo + 's';
 		getBarra.css('width', (tiempo*100/30)+'%');
         if(tiempo == 0){
-            score -= 10;
 			comprobar();
         }
 	}
