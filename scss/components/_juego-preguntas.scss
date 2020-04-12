@@ -1,5 +1,5 @@
 .segundo-menu{
-    position: absolute;
+    position: fixed;
     left: 0;
     transform: translateX(-60%);
     transition: all .5s ease-out;
@@ -36,7 +36,7 @@
     transform: translateX(0);
 }
 .icon-menu2{
-    position: absolute;
+    position: fixed;
     left: 1em;
     top: 1em;
     z-index: 101;

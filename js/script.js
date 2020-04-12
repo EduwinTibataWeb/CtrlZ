@@ -1,3 +1,9 @@
+window.setTimeout(function(){
+	"use strict";
+	var contenedor = document.getElementById('preloader');
+	contenedor.style.visibility = 'hidden';
+	contenedor.style.opacity = '0';
+},1000);
 $(document).ready(function(){
 	"use strict";
     $('.icon').on('click', function(){
@@ -8,6 +14,9 @@ $(document).ready(function(){
 		$('.segundo-menu').toggleClass('active-menu2');
 		$('.menu2').toggleClass('active-menu3');
 		$(this).toggleClass('active_icon2');
+	});
+	$('#jahen').on('click', function(){
+		$('.visita').css('display', 'none');
 	});
 	$('#capitulos').on('click', function(){
 		$('.capitulos').toggleClass('active-capitulos');
@@ -414,7 +423,6 @@ $(document).ready(function(){
 			}
 		}
 		if (numeroPreguntas >= necesariosNivel){
-			alert('Siguiente Nivel');
 			elnivel += 1;
             numeroPreguntas = 0;
 		}
