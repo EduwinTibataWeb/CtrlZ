@@ -1,0 +1,204 @@
+.banner-galeria{
+    width: 100%;
+    height: 50vh;
+    background-image: url('../assets/img/escena8-large.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.cont-banner-galeria{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: rgba($color: #000000, $alpha: .5);
+    padding: 0 10% 8em;
+    color: #ffff;
+    img{
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+}
+.all-gallery{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 4em 10%;
+}
+.category_list{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    a{
+      padding: 1.5em;
+      color: #000000;
+      border-radius: 5px;
+    }
+}
+.galeria-list{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.ct_item-active{
+  background: #A4A4A4;
+  transition: all .3s ease-in;
+}
+.galeria-imte {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 230px;
+  max-width: 315px;
+  max-height: 230px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.4s;
+  -webkit-box-shadow: 0px 48px 38px -49px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 48px 38px -49px rgba(0,0,0,0.75);
+  box-shadow: 0px 48px 38px -49px rgba(0,0,0,0.75);
+  cursor: pointer;
+}
+.galeria-imte * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.galeria-imte img {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.galeria-imte::after,
+.galeria-imte::before,
+.galeria-imte figcaption::after,
+.galeria-imte figcaption::before {
+  background: #0a0a0a;
+  width: 25%;
+  position: absolute;
+  content: '';
+  opacity: 0;
+  -webkit-transition: all 0.3s steps(4);
+  transition: all 0.3s steps(4);
+  z-index: 1;
+  top: 100%;
+  bottom: 0;
+  pointer-events: none;
+}
+.galeria-imte::before {
+  left: 0;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+.galeria-imte::after {
+  left: 25%;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.galeria-imte figcaption::before {
+  left: 50%;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  z-index: -1;
+}
+.galeria-imte figcaption::after {
+  left: 75%;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  z-index: -1;
+}
+.galeria-imte figcaption{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 30px;
+  pointer-events: none;
+}
+.galeria-imte h2,
+.galeria-imte q,
+.galeria-imte .icons {
+  margin: 0;
+  width: 100%;
+  opacity: 0;
+  z-index: 3;
+}
+.galeria-imte h2 {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.galeria-imte q{
+  font-weight: 300;
+}
+.galeria-imte .icons {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  margin-bottom: -10PX;
+}
+.galeria-imte i {
+  padding: 0px 10px;
+  display: inline-block;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0.8;
+}
+.galeria-imte:hover{
+  transform: scale(1.05);
+  .icons{
+    opacity: 1;
+  }
+}
+.galeria-imte i:hover {
+  opacity: 1;
+}
+.galeria-imte:hover:after,
+.galeria-imte.hover::after,
+.galeria-imte:hover::before,
+.galeria-imte.hover::before,
+.galeria-imte:hover figcaption::after,
+.galeria-imte.hover figcaption::after,
+.galeria-imte:hover figcaption::before,
+.galeria-imte.hover figcaption::before {
+  top: 0;
+  opacity: 0.8;
+}
+.galeria-imte:hover figcaption h2,
+.galeria-imte.hover figcaption h2,
+.galeria-imte:hover figcaption q,
+.galeria-imte.hover figcaption q,
+.galeria-imte:hover figcaption .icons,
+.galeria-imte.hover figcaption .icons {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.galeria-imte:hover figcaption h2,
+.galeria-imte.hover figcaption h2,
+.galeria-imte:hover figcaption .icons,
+.galeria-imte.hover figcaption .icons {
+  opacity: 1;
+}
+.galeria-imte:hover figcaption q,
+.galeria-imte.hover figcaption q{
+  opacity: 0.7;
+}

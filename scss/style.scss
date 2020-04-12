@@ -1,0 +1,157 @@
+    @import "components/normalize";
+@import "components/mixi";
+@import "components/tipografia";
+$color-menu: rgb(243, 167, 52);
+*,
+::before, 
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif; 
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; 
+}
+a{
+    text-decoration: none;
+}
+nav{
+    background-image: url('../assets/svg/fondoMenu.svg');
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.menu-logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-60px);
+    width: 300px;
+    height: 300px;
+    background-color: $color-menu;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 6px 42px -12px rgba(0,0,0,0.75);
+    a{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        @include flex-center;
+        transition: all .3s;
+        &:hover{
+            box-shadow: inset -14px -15px 93px -40px rgba(0,0,0,0.76);
+            img{
+                transform: rotate(-360deg);
+            }
+        }
+        img{
+            width: 50%;
+            transition: all 1s ease-out;
+        }
+    }
+}
+.icon-menu{
+    display: none;
+    position: absolute;
+    left: 1.3em;
+    top: 1.3em;
+}
+.icon{
+    width: 70px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    div{
+        width: 100%;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        transition: all .3s ease-in;
+    }
+}
+.active_icon div{
+    width: 10px;
+    height: 10px;
+}
+.menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    li{
+        padding: 1em;
+        a{
+            display: block;
+            padding: 1em;
+            font-size: 1.2em;
+            color: #ffffff;
+            transition: all .3s;
+            border-radius: .5em;
+            &:hover{
+                background-image: url('../assets/svg/link.svg');
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    }
+}
+.margen{
+    margin-right: 150px;
+}
+.margen2{
+    margin-left: 150px;
+}
+.insta:hover{
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.face:hover{
+    background-color: #3b5998;
+}
+.you:hover{
+    background-color: #c4302b;
+}
+footer{
+    background-color: #000000;
+    color: #fff;
+    padding: 1em 10%;
+}
+/*Estilos Index.html*/
+@import "components/index";
+/*Fin de Estilos Index.html*/
+/*Estilos Capitulos.html*/
+@import "components/capitulos";
+/*Fin de Estilos Capitulos.html*/
+/*Estilos galeria.html*/
+@import "components/galeria";
+/*fin Estilos galeria.html*/
+/*Estilos juego.html*/
+@import "components/juego";
+/*Fin de Estilos juego.html*/
+/*Estilos juego-preguntas.html*/
+@import "components/juego-preguntas";
+/*Fin de Estilos juego-preguntas.html*/
+/*Estilos Capitulo piloto.html*/
+@import "components/capitulo-piloto";
+/*Fin de Estilos Capitulo piloto.html*/
+@import "components/animations";
+@import "components/responsive";

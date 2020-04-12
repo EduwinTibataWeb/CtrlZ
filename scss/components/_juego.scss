@@ -1,0 +1,235 @@
+.cont-all-juego{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../assets/img/escena14-large.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cont-text-juego{
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10%;
+    h1{
+        font-size: 3em;
+        color: #ffff;
+        text-align: center;
+    }
+    button{
+        outline: none;
+        background: none;
+        border: 1px solid #ffff;
+        border-radius: .2em;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+        transition: all .3s ease;
+        display: block;
+        color: #ffff;
+        padding: 1em 2em;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover{
+            border: 1px solid rgb(13, 186, 255);
+            transform: scale(1.2);
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+        }
+    }
+}
+.cont-juego{
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: .5);
+    justify-content: center;
+    align-items: center;
+}
+.juego{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+.cont-info-game{
+    width: 350px;
+}
+.container{
+    padding: 0;
+    width: 500px;
+    height: 500px;
+	background-image: url("../assets/img/fondo-juego.gif");
+	background-size: cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#player{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+    transition: all .3s;
+    left: 20%;
+    top: 20%;
+    cursor: pointer;
+    img{
+	    width: 50px;
+        height: 50px;
+    }
+}
+.pointer{
+	background-color: #444;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; 
+    font-size: 2em;
+}
+.container-level{
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    height: 30%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    span{
+        font-size: 2.2em;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold; 
+    }
+}
+.level{
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	padding:10px 0;
+}
+.cont-info-win{
+    pointer-events: none;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-image: url('../assets/img/fondo-win.gif');
+    background-position: center;
+    background-size: cover;
+    padding: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    span{
+        font-size: 3em;
+        color: #fff;
+        text-shadow: 6px 4px 6px rgba(0, 0, 0, 0.7);
+    }
+}
+.close-juego{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    i{
+        font-size: 3em;
+        color: #fff;
+    }
+}
+.ganador{
+    animation: winlevel 3s; 
+}
+.tiempotermina{
+    animation: tiempo 1s infinite alternate ease-in;
+}
+.louser{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: .5);
+}
+.cont-louser{
+    padding: 3em;
+    background-color: #fff;
+    border-radius: 1em;
+    h2{
+        text-align: center;
+        font-size: 4em;
+    }
+}
+.info-score{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgba($color: #000000, $alpha: .5);
+    align-items: center;
+    padding: 1em;
+    border-radius: 1em;
+}
+.score{
+    width: 70%;
+    h3{
+        font-size: 2em;
+        padding: .5em 0;
+    }
+}
+.redes-game{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid rgba($color: #000000, $alpha: .5);
+    a{
+        @include flex-center;
+        width: 50px;
+        height: 50px;
+        color: #fff;
+        background-color: #cccccc;
+        font-size: 1.5em;
+        margin: .5em 0;
+        border-radius: 5px;
+    }
+}
+.botones-louser{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2em;
+    button{
+        border: none;
+        background-color: rgb(243, 167, 52);
+        outline: none;
+        cursor: pointer;
+        color: #fff;
+        padding: 1em 2em;
+        transition: all .3s ease-in;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}

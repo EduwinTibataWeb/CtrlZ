@@ -1,0 +1,320 @@
+@media screen and (max-width:1000px){
+    .juego-preguntas{
+        height: 100%;
+        align-items: center;
+        padding: 0;
+    }
+    .contenido-juego{
+        margin: 10em 0;
+        max-height: 1200px;
+    }
+    .todo-juego, .indicadores{
+        width: 100%;
+    }
+    .todo-juego{
+        height: 80%;
+    }
+    #pregunta{
+        height: 30%;
+    }
+    #respuestas{
+        height: 60%;
+        padding-bottom: 0;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #comprobar{
+        height: 10%;
+        padding: 1em
+    }
+    .respuesta{
+        width: 100%;
+        margin: 0;
+    }
+    .indicadores{
+        width: 100%;
+        height: 10%;
+        padding-top: 1em;
+        flex-direction: row;
+    }
+    .all-elenco {
+        padding-top: 4em;
+        h2{
+
+            transform: translateX(0);
+        }
+    }
+    .cap1 > section,
+    .cap1 > aside{
+        width: 100%;
+    }
+    .cap1 > section{
+        padding: 0;
+    }
+    .info-about-capi{
+        padding: 0;
+    }
+}
+@media screen and (min-width:830px){
+    .redes-sociales{
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+    }
+    .item-red{
+        height: 70px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        a{
+            padding: 1em;
+            background-color: #222222;
+            color: #fff;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            transition: all 1s ease-out;
+            box-shadow: 5px 10px 26px -12px rgba(0,0,0,0.75);
+            span{
+                display: none;
+                transition: all .4s ease-out;
+                opacity: 0;
+            }
+            i{
+                padding-left: 5px;
+                font-size: 2em;
+            }
+            &:hover span{
+                transition: all 1s ease-out;
+                display: block;
+                opacity: 1;
+                animation: focus-in-expand 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+        }
+    }
+}
+@media screen and (max-width:830px){
+    nav{
+        box-shadow: 0px 6px 42px -12px rgba(0,0,0,0.75);
+    }
+    .icon-menu{
+        display: block;
+    }
+    .menu-logo{
+        position: relative;
+        width: 90px;
+        height: 90px;
+        transform: translateX(-50%) translateY(0px);
+        border-radius: 0;
+        box-shadow: none;
+        a{
+            img{
+                width: 85%;
+            }
+
+        }
+    }
+    .margen{
+        margin-right: 0;
+    }
+    .margen2{
+        margin-left: 0;
+    }
+    .menu{
+        max-height: 0;
+        overflow: hidden;
+        transition: all 1s ease-in;
+        ul li a{
+            font-size: 1em;
+        }
+    }
+    .active-menu{
+        max-height: 500px;
+        padding-bottom: 1em;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .redes-sociales{
+        display: flex;
+        justify-content: center;
+    }
+    .item-red{
+        @include flex-center;
+        width: 50px;
+        height: 50px;
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            font-size: 1.2em;
+            @include flex-center;
+            transition: all .3s ease-in;
+            span{
+                display: none;
+            }
+            &:hover{
+                transform: scale(1.1);
+                box-shadow: 5px 10px 26px -12px rgba(0,0,0,0.75);
+            }
+        }
+    }
+    .banner{
+        animation: banner 30s infinite;
+    }
+    .cont-video,
+    .cont-info-teaser{
+        width: 100%;
+    }
+    .cont-video{
+        padding-bottom: 2em;
+    }
+    .active-teaser{
+        padding: 4em 0;
+        max-height: 5800px;
+    }
+    .play{
+        top: 70%;
+        left: 50%;
+    }
+    .cont-banner-galeria{
+        align-items: center;
+        justify-content: center;
+        padding: 0 10%;
+    }
+    .category_list,
+    .galeria-list{
+        width: 100%;
+    }
+    .category_list a{
+        text-align: center;
+    }
+    .juego{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border: 1px solid #fff;
+        position: relative;
+    }
+    .cont-info-game{
+        width: 100%;
+    }
+    .container-level{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+    }
+    #tiempo{
+        position: absolute;
+        top: 4em;
+        left: .1em;
+        z-index: 10;
+        font-size: 1em;
+        pointer-events: none;
+    }
+    #puntos{
+        position: absolute;
+        z-index: 10;
+        bottom: 1em;
+        right: 1em;
+        pointer-events: none;
+    }
+    #player{
+        left: 0%;
+        top: 0%;
+    }
+    .score,
+    .redes-game{
+        width: 100%;
+    }
+    .redes-game{
+        flex-direction: row;
+        justify-content: space-around;
+        border-left: none ;
+        border-top:  1px solid rgba($color: #000000, $alpha: .5);
+    }
+    .contEstadistica{
+        width: 100%;
+        height: 50%;
+    }
+    .contRedes{
+        width: 60%;
+        height: 20%;
+        flex-direction: row;
+        justify-content: center;
+        border-left: none;
+        border-top: 1px solid #000000;
+    }
+    .botones-louser2{
+        height: 30%;
+    }
+    .elnivel{
+        width: 100%;
+        height: 30%;
+    }
+    .correct, .false, .null{
+        width: 25px;
+        height: 25px;
+        color: #fff;
+    }
+    .info-ficha{
+        background: linear-gradient(180deg, rgba(0,0,0,1) 26%, rgba(0,0,0,0) 100%);
+    }
+    .ficha-tecnica img{
+        width: 300px;
+        right:  0%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .info-podcast,
+    .cont-podcast{
+        width: 100%;
+    }
+    .info-podcast{
+        padding-bottom: 1em;
+        p{
+            padding-right: 0;
+        }
+
+    }
+    .segundo-menu{
+        transform: translateX(-100%);
+    }
+    .active-menu2{
+        transform: translateX(0);
+    }
+    .contenido-juego{
+        margin: 6em 0 8em;
+        max-height: 1200px;
+    }
+    .caption2{
+        align-items: center;
+    }
+    .grafica{
+        width: 100%;
+        height: 20%;
+    }
+    .cont-grafica{
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    #grafica1,
+    #grafica2,
+    #grafica3{
+        height: 2em;
+        width: 0;
+    }
+    #porcentaje_grafica1,
+    #porcentaje_grafica2,
+    #porcentaje_grafica3{
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}

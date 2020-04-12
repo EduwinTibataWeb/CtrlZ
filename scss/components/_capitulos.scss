@@ -1,0 +1,162 @@
+.ficha-tecnica{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    background-image: url('../assets/img/fondo-persona.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    img{
+        position: absolute;
+        width: 550px;
+        right:  10%;
+        object-fit: cover;
+        bottom: 0;
+    }
+}
+.info-ficha{
+    z-index: 1;
+    padding: 7em 10%;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 26%, rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+    color: #ffffff;
+    position: relative;
+    h1{
+        font-size: 4em;
+        margin: 0;
+        padding: 1em 0 .2em;
+        user-select: none;
+    }
+    p{
+        width: 100%;
+        text-align: justify;
+        max-width: 600px;
+        user-select: none;
+    }
+    h2{
+        padding-top: 1em;
+        cursor: pointer;
+        display: inline-block;
+        i{
+            padding-right: .4em;
+            transform: rotate(-90deg) translateX(25%);
+            transition: all .3s;
+        }
+        .active-icon{
+            transform: rotate(0deg) translateX(0);
+        }
+    }
+}
+.mor-info{
+    padding-bottom: 1em;
+    pointer-events: none;
+    user-select: none;
+    p span:first-child{
+        padding-right: 1em;
+    }
+    p span:last-child{
+        margin-left: 1em;
+        border: 1px solid #ffffff;
+        font-size:1em;
+        padding: 2px 3px;
+    }
+}
+.capitulos{
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    li a{
+        padding: .5em 2em;
+        color: #ffffff;
+        display: inline-block;
+        &:hover{
+            color: aqua;
+        }
+    }
+}
+.active-capitulos{
+    max-height: 300px;
+}
+.play{
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    a{
+        color: #ffffff;
+        font-size: 3em;
+    }
+}
+.cont-capitulo-vid{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: .5);
+    z-index: 10000;
+    video{
+        width: 100%;
+        max-width: 800px;
+        animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+}
+.close-capitulo{
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    color: #ffffff;
+    right:  1em;
+    font-size: 3em;
+}
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal img {
+    max-width: 700px;
+    width: 90%;
+    position: relative;
+  }
+  
+  #modal__boton {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    font-size: 2.5em;
+    color: #ffff;
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    cursor: pointer;
+  }
+  
+  #modal__boton:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    color: #3bbbd9;
+  }
