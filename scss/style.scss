@@ -179,6 +179,11 @@ footer{
     background-color: #000000;
     color: #fff;
     padding: 1em 10%;
+    display: flex;
+    justify-content: space-between;
+    a{
+        color: #fff;
+    }
 }
 /*Estilos Index.html*/
 @import "components/index";

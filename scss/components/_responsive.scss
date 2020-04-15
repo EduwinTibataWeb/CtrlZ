@@ -270,16 +270,18 @@
         left: 50%;
         transform: translateX(-50%);
     }
+    .podcast{
+        padding: 1em 10% 2em;
+    }
     .info-podcast,
     .cont-podcast{
         width: 100%;
     }
     .info-podcast{
-        padding-bottom: 1em;
-        p{
-            padding-right: 0;
+        padding: 1em 10%;
+        img{
+            padding: 0;
         }
-
     }
     .segundo-menu{
         transform: translateX(-100%);

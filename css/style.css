@@ -617,6 +617,16 @@ footer {
   background-color: #000000;
   color: #fff;
   padding: 1em 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+footer a {
+  color: #fff;
 }
 
 /*Estilos Index.html*/
@@ -1183,9 +1193,11 @@ footer {
   width: 50%;
 }
 
-.info-podcast p {
-  text-align: justify;
-  padding-right: 1em;
+.info-podcast img {
+  width: 100%;
+  height: 100%;
+  padding: 4em;
+  pointer-events: none;
 }
 
 .cont-podcast {
@@ -4230,15 +4242,18 @@ aside h3::after {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
   }
+  .podcast {
+    padding: 1em 10% 2em;
+  }
   .info-podcast,
   .cont-podcast {
     width: 100%;
   }
   .info-podcast {
-    padding-bottom: 1em;
+    padding: 1em 10%;
   }
-  .info-podcast p {
-    padding-right: 0;
+  .info-podcast img {
+    padding: 0;
   }
   .segundo-menu {
     -webkit-transform: translateX(-100%);
