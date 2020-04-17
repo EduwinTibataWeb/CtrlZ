@@ -760,7 +760,7 @@ footer a {
 }
 
 .cont-video {
-  width: 60%;
+  width: 50%;
 }
 
 .cont-video video {
@@ -770,17 +770,14 @@ footer a {
 }
 
 .cont-info-teaser {
-  width: 40%;
-  padding-left: 1em;
+  width: 50%;
+  padding: 1em 6em;
 }
 
-.cont-info-teaser h3 {
-  font-size: 1.5em;
-  padding-bottom: 1em;
-}
-
-.cont-info-teaser p {
-  text-align: justify;
+.cont-info-teaser img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .galley-container {
@@ -4120,8 +4117,20 @@ aside h3::after {
   .cont-info-teaser {
     width: 100%;
   }
+  .cont-info-teaser {
+    padding: 1em 10%;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .cont-info-teaser img {
+    padding: 0;
+  }
   .cont-video {
     padding-bottom: 2em;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
   }
   .active-teaser {
     padding: 4em 0;

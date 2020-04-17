@@ -170,8 +170,16 @@
     .cont-info-teaser{
         width: 100%;
     }
+    .cont-info-teaser{
+        padding: 1em 10%;
+        order: 1;
+        img{
+            padding: 0;
+        }
+    }
     .cont-video{
         padding-bottom: 2em;
+        order: 2;
     }
     .active-teaser{
         padding: 4em 0;

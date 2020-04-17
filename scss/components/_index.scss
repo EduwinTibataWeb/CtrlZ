@@ -93,21 +93,19 @@
     align-items: center;
 }
 .cont-video{
-    width: 60%;
+    width: 50%;
     video{
         width: 100%;
         box-shadow: 1px 37px 58px -22px rgba(0,0,0,0.75);
     }
 }
 .cont-info-teaser{
-    width: 40%;
-    padding-left: 1em;
-    h3{
-        font-size: 1.5em;
-        padding-bottom: 1em;
-    }
-    p{
-        text-align: justify;
+    width: 50%;
+    padding: 1em 6em;
+    img{
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
     }
 }
 .galley-container{
