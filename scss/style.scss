@@ -185,6 +185,22 @@ footer{
         color: #fff;
     }
 }
+@function long-shadow($numero, $color){
+    $text-shadow: 1px -1px #{$color};
+    @for $i from 1 through $numero {
+        $text-shadow: '#{$text-shadow},
+                      #{$i}px -#{$i}px #{$color}';  
+    }
+    @return unquote($text-shadow);
+}
+@function long-shadow1($numero, $color){
+    $text-shadow: 1px -1px #{$color};
+    @for $i from 1 through $numero {
+        $text-shadow: '#{$text-shadow},
+                      #{$i}px #{$i}px #{$color}';  
+    }
+    @return unquote($text-shadow);
+}
 /*Estilos Index.html*/
 @import "components/index";
 /*Fin de Estilos Index.html*/

@@ -114,7 +114,6 @@
             img{
                 width: 85%;
             }
-
         }
     }
     .margen{
@@ -325,5 +324,20 @@
         top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
+    }
+}
+@media screen and (max-width:430px){
+    #buttons{
+        width: 100%;
+    }
+    #volumen{
+        width: 100%;
+        flex-direction: row;
+        button{
+            margin: 0.1em 0.2em;
+        }
+    }
+    #currentTime{
+        top: 90%;
     }
 }

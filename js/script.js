@@ -471,3 +471,116 @@ $(document).ready(function(){
 	jugar();
 	disminuirTiempo();
 });
+$(document).ready(function(){
+		var songs = ["assets/audio/podcast.mp3","assets/audio/podcast.mp3","podcast.mp3"];
+		var eltitulo = ["podcast.mp3","podcast2.mp3","podcast3.mp3"];
+        var songTitle = document.getElementById("songTitle");
+        var fillBar = document.getElementById("fill");
+		var currentTime = document.getElementById("currentTime");
+        var song = new Audio();
+        var currentSong = 0;
+		var botonPlay = $('#play');
+		var botonpre = $('#pre');
+		var botonnext = $('#next');
+		var botondecrease = $('#decrease');
+		var botonincrease = $('#increase');
+		var decreaseAudio = $('#lessSeconds');
+		var increaseAudio = $('#moreSeconds');
+        window.onload = playSong;
+        function playSong(){
+            song.src = songs[currentSong]; 
+            songTitle.textContent = eltitulo[currentSong];
+            song.play();
+		}
+		botonPlay.on('click', function(){
+			playOrPauseSong();
+		});
+		botonpre.on('click', function(){
+			pre()
+		});
+		botonnext.on('click', function(){
+			next()
+		});
+		botondecrease.on('click', function(){
+			decreaseVolumen();
+		});
+		botonincrease.on('click', function(){
+			increaseVolumen();
+		});
+		decreaseAudio.on('click', function(){
+			decreaseAudi()
+		});
+		increaseAudio.on('click', function(){
+			increaseAudi()
+		});
+        function playOrPauseSong(){
+            if(song.paused){
+                song.play();
+                $("#play i").attr("class","far fa-pause-circle");
+            }
+            else{
+                song.pause();
+                $("#play i").attr("class","far fa-play-circle");
+            }
+        }
+        song.addEventListener('timeupdate',function(){
+            var position = song.currentTime / song.duration;
+            fillBar.style.width = position * 100 +'%';
+			convertTime(Math.round(song.currentTime));
+			if(song.ended){
+				next();
+			}
+        });
+		function convertTime(seconds){
+			var min = Math.floor(seconds / 60);
+			var sec = seconds % 60;
+			min = (min < 10) ? "0" + min : min;
+			sec = (sec < 10) ? "0" + sec : sec;
+			currentTime.textContent = min + ':' + sec;
+			totalTime(Math.round(song.duration));
+		}
+		function totalTime(seconds){
+			var min = Math.floor(seconds / 60);
+			var sec = seconds % 60;
+			min = (min < 10) ? "0" + min : min;
+			sec = (sec < 10) ? "0" + sec : sec;
+			currentTime.textContent += "/" + min + ':' + sec;
+		}
+        function next(){    
+            currentSong++;
+            if(currentSong > 2){
+                currentSong = 0;
+            }
+            playSong();
+            $("#play i").attr("class","far fa-pause-circle");
+        }
+        function pre(){     
+            currentSong--;
+            if(currentSong < 0){
+                currentSong = 2;
+            }
+            playSong();
+            $("#play i").attr("class","far fa-pause-circle");
+		}
+		function increaseAudi(){
+			song.currentTime += 10;
+		}
+		function decreaseAudi(){
+			song.currentTime -= 10;
+		}
+		function decreaseVolumen(){
+			song.volume -= 0.20;
+			if(song.volume > 0.5){
+				$("#volumenIcon i").attr("class","fas fa-volume-up");
+			}else if(song.volume < 0.01){
+				$("#volumenIcon i").attr("class","fas fa-volume-off");
+			}
+		}
+		function increaseVolumen(){
+			song.volume += 0.20;
+			$("#volumenIcon i").attr("class","fas fa-volume-down");
+			if(song.volume >= 0.5){
+				$("#volumenIcon i").attr("class","fas fa-volume-up");
+			}
+		}
+});
