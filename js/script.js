@@ -45,8 +45,7 @@ $(document).ready(function(){
     const getImages = container => [...container.querySelectorAll('img')];
 	//obtener las rutas de las imagenes
 		const getLargeImages = gallery => gallery
-											.map ( el => el.src)
-											.map ( el => el.replace('thumb', 'large'));
+											.map ( el => el.src);
 	//obtener la descripcion de las imagenes
 	//capturar el evento
 		const openLightboxEvent = (container,gallery,larges) => {
@@ -185,28 +184,44 @@ $(document).ready(function(){
 $(document).ready(function(){
 	'use strict';
 	var preguntas1 = [
-        "¿Cuantosaños tengo?",
-        "¿Cual es mi segundo apellido?",
-        "¿Cuantos hermanos tengo?",
-        "¿Con quien vivo?",
+        "¿Cuantos meses dura su etapa lectiva en producción multimedia?",
+        "¿En que ramas NO se desempeña un productor multimedia?",
+        "programas NO usa un productor multimedia?",
+		"¿Cuantos meses dura su etapa Productiva en producción multimedia?",
+		"¿Cuantas horas lúdicas tienes qué hacer?",
+        "¿Qué es lo que debes hacer para comenzar cualquier proyecto?",
     ];
     var respuestas1 = [
-        ["&#60;p&#62;", "h1", "h2", "19"],
-        ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nesciunt laboriosam vitae harum soluta quas dolor odit quia, cum aut?", "Eduwin", "Alejandro", "Tibata"],
-        ["3", "4", "1", "0"],
-        ["Abuelos", "Madre", "Padre", "Tios",],
+        ["18 Meses", "12 Meses", "6 Meses", "20 Meses"],
+        ["Programador orientado a objetos.", "Marketing digital.", "FrontEnd", "Cine y Tv."],
+        ["SketchUp", "Audition", "Illustrator", "Sublime Text"],
+		["6 Meses", "12 Meses", "18 Meses", "20 Meses"],
+		["40 Horas", "80 Horas", "10 Horas", "20 Horas"],
+		["La idea.", "Buscar tu equipo.", "Hacer la pagina.", "Ninguna es correcta."],
     ];
     var preguntas2 = [
-        "Prueba",
-        "Esto",
-        "es",
-        "una",
+        "En la suite de adobe cuál de estos programas está diseñado para realizar gif e ilustraciones.",
+        "Photoshop maneja:",
+        "Illustrator maneja",
+        "Audition se utiliza para el manejo de:",
+        "Photoshop se utiliza para el manejo de:",
+        "Illustrator se utiliza para el manejo de:",
+        "Dreamweaver se utiliza para el manejo de:",
+        "¿Cual de los siguientes softwares utilizarías para hacer un logo?",
+        "¿Cual de los siguientes softwares utilizarías para Animar un logo?",
+        "¿Cual de los siguientes softwares utilizarías para hacer tu pagina web?",
     ];
     var respuestas2 = [
-        ["27", "26", "28", "29"],
-        ["Bolivar", "Eduwin", "Alejandro", "Tibata"],
-        ["3", "4", "1", "0"],
-        ["Abuelos", "Madre", "Padre", "Tios",],
+        ["Photoshop", "Illustrator", "Premiere pro", "Dimension"],
+		["Mapa de bits", "Vectores", "HTML", "CSS"],
+        ["Vectores", "Mapa de bits", "HTML", "CSS"],
+		["Audio", "Vectores", "Retoque de imágenes", "PDF interactivos"],
+        ["Imágenes", "Vectores", "Audio", "PDF interactivos"],
+        ["Vectore", "Imágenes", "Audio", "PDF"],
+        ["Codigo", "Imágenes", "Audio", "PDF"],
+        ["Illustrator", "Photoshop", "Premiere pro", "Dreamweaver"],
+        ["After Effects", "Photoshop", "Animate", "Dreamweaver"],
+        ["Dreamweaver", "Photoshop", "Animate", "Illustrator"],
 	];
 	var preguntas3 = [
         "¿Que significan las siglas HTML?",
