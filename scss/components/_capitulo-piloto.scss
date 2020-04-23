@@ -20,6 +20,7 @@
     color: #ffff;
     h1{
         padding: 0 10%;
+        text-align: center;
     }
     img{
       position: absolute;
@@ -91,7 +92,7 @@
     }
     p{
         padding-bottom: 1em;
-        text-align: justify;
+        text-align: left;
     }
 }
 .elstory{
@@ -177,6 +178,8 @@ aside{
     position: relative;
     h4{
         padding: 0 1em;
+        height: 100%;
+        width: 50%;
     }
     a{
         display: block;
@@ -201,7 +204,7 @@ aside{
     }
 }
 .cont-img-poster{
-    width: 420px;
+    width: 50%;
     height: 130px;
     overflow: hidden;
     position: relative;

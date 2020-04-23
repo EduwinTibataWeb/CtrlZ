@@ -47,6 +47,11 @@ a{
     border-radius: 5px;
     box-shadow: 0 0 10px -3px rgba(0,0,0,0.75);
     transition: all .3s ease-out;
+    width: 130px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     span{
         position: absolute;
         top: -6px;

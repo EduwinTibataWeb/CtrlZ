@@ -135,12 +135,13 @@
     left: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal img {
-    max-width: 700px;
-    width: 90%;
-    position: relative;
+    img {
+        max-width: 700px;
+        max-height: 700px;
+        object-fit: contain;
+        width: 90%;
+        position: relative;
+    }
   }
   
   #modal__boton {
@@ -153,11 +154,10 @@
     -o-transition: all .3s ease-out;
     transition: all .3s ease-out;
     cursor: pointer;
-  }
-  
-  #modal__boton:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    color: #3bbbd9;
+    &:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        color: #3bbbd9;
+    }
   }

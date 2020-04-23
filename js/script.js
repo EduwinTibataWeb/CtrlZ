@@ -487,8 +487,8 @@ $(document).ready(function(){
 	disminuirTiempo();
 });
 $(document).ready(function(){
-		var songs = ["assets/audio/podcast.mp3","assets/audio/podcast.mp3","podcast.mp3"];
-		var eltitulo = ["podcast.mp3","podcast2.mp3","podcast3.mp3"];
+		var songs = ["assets/audio/podcast1.mp3","assets/audio/podcast2.mp3","assets/audio/podcast3.mp3"];
+		var eltitulo = ["podcast_pt1.mp3","podcast_pt2.mp3","podcast_pt3.mp3"];
         var songTitle = document.getElementById("songTitle");
         var fillBar = document.getElementById("fill");
 		var currentTime = document.getElementById("currentTime");
@@ -505,7 +505,6 @@ $(document).ready(function(){
         function playSong(){
             song.src = songs[currentSong]; 
             songTitle.textContent = eltitulo[currentSong];
-            song.play();
 		}
 		botonPlay.on('click', function(){
 			playOrPauseSong();
@@ -566,7 +565,8 @@ $(document).ready(function(){
             if(currentSong > 2){
                 currentSong = 0;
             }
-            playSong();
+			playSong();
+			song.play();
             $("#play i").attr("class","far fa-pause-circle");
         }
         function pre(){     
@@ -574,7 +574,8 @@ $(document).ready(function(){
             if(currentSong < 0){
                 currentSong = 2;
             }
-            playSong();
+			playSong();
+			song.play();
             $("#play i").attr("class","far fa-pause-circle");
 		}
 		function increaseAudi(){
